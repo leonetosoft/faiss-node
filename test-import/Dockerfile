@@ -6,9 +6,9 @@ RUN echo "Running on $BUILDPLATFORM, building for $TARGETPLATFORM";
 
 WORKDIR /app
 COPY package.json ./
-COPY faiss-napi.tgz ./
+COPY faiss-node.tgz ./
 
-RUN npm install ./faiss-napi.tgz --foreground-scripts
+RUN npm install ./faiss-node.tgz --foreground-scripts
 COPY . .
 
 CMD [ "node", "index.js" ]
